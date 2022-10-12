@@ -1,0 +1,37 @@
+
+
+#include <iostream>
+char palindrome();
+using namespace std;
+
+int main()
+{
+    
+    if(palindrome())
+        cout<<"true";
+    else
+        cout<<"false";
+    return 0;
+   
+}
+
+char palindrome()
+{
+    int x,r,y=0;
+    cout<<"enter a number";
+    cin>>x;
+    int z=x;
+    while(x)
+    {
+        if(x<0)
+            return false;
+        r=x%10;
+        y=y*10+r;
+        x=x/10;
+    }
+   
+    if(z==y)
+        return true;
+    else 
+        return false;
+}
